@@ -1,0 +1,6 @@
+D:\keepalived-windows\keepalived-setup-action\bin\Release\keepalived-setup-action.dll
+D:\keepalived-windows\keepalived-setup-action\bin\Release\keepalived-setup-action.pdb
+D:\keepalived-windows\keepalived-setup-action\obj\Release\keepalived-setup-action.csproj.AssemblyReference.cache
+D:\keepalived-windows\keepalived-setup-action\obj\Release\keepalived-setup-action.csproj.CoreCompileInputs.cache
+D:\keepalived-windows\keepalived-setup-action\obj\Release\keepalived-setup-action.dll
+D:\keepalived-windows\keepalived-setup-action\obj\Release\keepalived-setup-action.pdb

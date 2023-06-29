@@ -40,3 +40,7 @@ vrrp_instance {
   + `priority` 权重，谁最大谁最终竞争胜利，state变为MASTER BACKUP的权重设置要小于MASTER 范围0到254
   + `advert_int` 心跳间隔 单位秒 范围0到254
   + `virtual_ipaddress` 虚拟ip，请保证在同一子网范围内，可配置多个
+
+## 遇到问题？
+
+请提交[issue](https://github.com/jarryxy/keepalived-windows/issues/new/choose)... 

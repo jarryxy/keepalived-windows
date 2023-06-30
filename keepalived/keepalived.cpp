@@ -99,9 +99,9 @@ void keepalived() {
         pthread_create(&tids[1], NULL, recv_adv, (void*)&conf);
     }
 
-    //while (running) {
-    //    Sleep(1000);
-    //}
+    while (running) {
+        Sleep(1000);
+    }
 }
 
 void keepalived_exit(DWORD fdwControl) {

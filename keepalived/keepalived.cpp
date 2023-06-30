@@ -74,7 +74,7 @@ std::string wstringToString(const std::wstring& wstr)
 }
 
 // 程序主函数
-void keepalived() {
+void keepalived(BOOL isCmd) {
     wstring path = getAbsolutePath(L"keepalived.conf");
     conf = read_vrrp_conf(wstringToString(path));
     print_vrrp_conf(conf);
@@ -99,7 +99,7 @@ void keepalived() {
         pthread_create(&tids[1], NULL, recv_adv, (void*)&conf);
     }
 
-    while (running) {
+    while (running && isCmd) {
         Sleep(1000);
     }
 }

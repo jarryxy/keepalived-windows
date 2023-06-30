@@ -5,7 +5,7 @@
 using namespace std;
 
 // keepalived.h
-void keepalived();
+void keepalived(BOOL isCmd);
 void keepalived_exit(DWORD fdwControl);
 // keepalived.h
 
@@ -28,6 +28,12 @@ BOOL console_handler(DWORD ctrl_type)
 
 int main(int argc, const char* argv[])
 {
-    keepalived();
+    // 设置控制台事件处理函数
+    if (!SetConsoleCtrlHandler((PHANDLER_ROUTINE)console_handler, TRUE))
+    {
+        std::cerr << "Error setting console handler." << std::endl;
+        return 1;
+    }
+    keepalived(true);
     return 0;
 }

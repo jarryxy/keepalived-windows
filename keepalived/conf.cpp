@@ -9,6 +9,32 @@
 #include "conf.h"
 using namespace std;
 
+std::string trim(const std::string& str)
+{
+	std::size_t first_non_space = str.find_first_not_of(" \t\r\n");
+	std::size_t last_non_space = str.find_last_not_of(" \t\r\n");
+
+	if (first_non_space == std::string::npos)
+	{
+		return "";
+	}
+
+	return str.substr(first_non_space, last_non_space - first_non_space + 1);
+}
+
+std::string extract_quoted_content(const std::string& line)
+{
+	std::size_t first_quote_pos = line.find_first_of("\"");
+	std::size_t last_quote_pos = line.find_last_of("\"");
+
+	if (first_quote_pos != std::string::npos && last_quote_pos != std::string::npos && first_quote_pos < last_quote_pos 
+		&& first_quote_pos == 0 && last_quote_pos == line.length()-1)
+	{
+		return line.substr(first_quote_pos + 1, last_quote_pos - first_quote_pos - 1);
+	}
+
+	return line;
+}
 
 vrrp_instance read_vrrp_instance(ifstream& file) {
 	vrrp_instance instance;
@@ -28,7 +54,10 @@ vrrp_instance read_vrrp_instance(ifstream& file) {
 				ss >> instance.interface_v;
 			}
 			else if (key == "interface_name") {
-				ss >> instance.interface_name;
+				string tmp;
+				getline(ss, tmp);
+				instance.interface_name = trim(tmp);
+				instance.interface_name = extract_quoted_content(instance.interface_name);
 			}
 			else if (key == "virtual_router_id") {
 				ss >> tmp;

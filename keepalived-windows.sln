@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "keepalived", ".\keepalived\keepalived.vcxproj", "{0581E2A5-F248-4AEC-8F2B-97233C308526}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "keepalived", "keepalived\keepalived.vcxproj", "{0581E2A5-F248-4AEC-8F2B-97233C308526}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "keepalived-setup", ".\keepalived-setup\keepalived-setup.vdproj", "{4C7CEDD7-94EB-4789-9F15-10BE8C0CD103}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "keepalived-setup", "keepalived-setup\keepalived-setup.vdproj", "{4C7CEDD7-94EB-4789-9F15-10BE8C0CD103}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keepalived-setup-action", ".\keepalived-setup-action\keepalived-setup-action.csproj", "{AD6B433B-3FA0-42BD-99B0-3FA2CDC5C63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keepalived-setup-action", "keepalived-setup-action\keepalived-setup-action.csproj", "{AD6B433B-3FA0-42BD-99B0-3FA2CDC5C63F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
